@@ -1,0 +1,8 @@
+node_modules
+/cypress/videos/**
+/cypress/screenshots/**
+.mp4
+debug.log*
+npm-debug.log*
+.vscode/
+/cypress/support/environments/**

@@ -6,7 +6,7 @@ describe('Party Members', () => {
         cy.requestAccessToken();
     })
 
-    it('List party Member ', () => {
+    it('List party Member', () => {
         var offset = 0;
         var limit = 10;
         cy.request({
@@ -16,8 +16,8 @@ describe('Party Members', () => {
             expect(response.status).to.eq(206);
             var maximumDataLimitResponse = 100;
             if(expect(response.body).to.not.be.null){
-                var data = (response.body)
-                var countDataArray = data.length;;
+                var data = (response.body);
+                var countDataArray = data.length;
                 expect(data[0]).to.have.property('partyMemberId');
                 expect(data[0]).to.have.property('cpfCnpj');
                 expect(data[0]).to.have.property('name');
